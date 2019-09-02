@@ -1,6 +1,8 @@
 # super-guacamole
 Visualization Final project (InfoVis)
+
 MoneyBurst
+
 Luis Alberto ALvarez Zendejas - 119446
 
 Who are the target users? - Domain situation
