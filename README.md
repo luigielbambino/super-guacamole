@@ -1,6 +1,7 @@
 # super-guacamole
 Visualization Final project (InfoVis)
 MoneyBurst
+Luis Alberto ALvarez Zendejas - 119446
 
 Who are the target users? - Domain situation
 People worried about their expenses and savings. Everyone who wants to spend their money more efficiently or have money saving goals. Particularly focused on young adults and older adults that are working or studying. Not necessarily skilled in management processes but with medium to high level of technology expertise, meaning that they are comfortable using desktop and mobile devices and applications.
