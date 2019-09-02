@@ -1,6 +1,6 @@
 .money-spendings{
   /*width: 800px;*/
-  height: 720px;
+  height: 680px;
 }
 
 .callout h5{
@@ -21,8 +21,8 @@
 }
 
 #sidebar {
-  float: left;
-  width: 100%;
+  float: right;
+  width: auto;
 }
 
 #sequence {
@@ -83,3 +83,44 @@
   margin: 0 !important;
 }
 
+.legendbar{
+  margin-right: 150px;
+}
+
+.legend{
+  width: 120px;
+  float: left;
+  clear: left;;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px;
+  margin: 10px 3px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+}
+.home{
+  background-color: #EE6B53;
+}
+.food{
+  background-color: #81BD28;
+}
+.health{
+  background-color: #B584C8;
+}
+.transportation{
+  background-color: #FECF42;
+}
+.personal{
+  background-color: #0FB0C9;
+}
+.entertainment{
+  background-color: #ED7501;
+}
+.education{
+  background-color: #005BA3;
+}
+.management{
+  background-color: #878383;
+}

@@ -11,13 +11,64 @@ var b = {
 // Mapping of step names to colors.
 var colors = {
   "hogar": "#EE6B53",
+  "agua": "#EE6B53",
+  "luz": "#ED745F",
+  "reparaciones": "#ED7E6B",
+  "renta": "#ED8877",
+  "decoracion": "#ED9282",
+  "gas": "#ED9D8E",
+  "impuestos": "#EDA79A",
+  "telefono": "#EDB1A6",
+  "lavanderia": "#EDBBB2",
+  "accesorios": "#EDC5BE",
+
   "comida": "#82BC28",
+  "despensa": "#82BC28",
+  "restaurante": "#98BD60",
+  "alcohol": "#A7BD86",
+
   "salud": "#B584C8",
+  "farmacia": "#B584C8",
+  "consultas medicas": "#B68BC7",
+  "gimnasio": "#B995C7",
+  "seguro de vida": "#BC9FC7",
+  "seguro medico": "#BEA9C7",
+
   "transporte": "#FECF42",
+  "gasolina": "#FECF42",
+  "seguro de coche": "#FFD659",
+  "transporte publico": "#FFDC73",
+  "impuestos coche": "#FFE28C",
+  "renta coche": "#FFE9A6",
+  "compra de coche": "#FFEFBF",
+  "taller mecanico": "#FFF5D9",
+
   "personales": "#0FB0C9",
+  "ropa": "#0FB0C9",
+  "gadgets": "#22B3C9",
+  "peluqueria": "#36B6C9",
+  "accesorios": "#4BB9C9",
+  "regalos": "#5FBBC9",
+  "otros": "#73BEC9",
+
   "entretenimiento": "#ED7501",
+  "musica": "#ED7501",
+  "cine": "#ED7501",
+  "viajes": "#ED7501",
+  "deporte": "#ED7501",
+  "fiestas": "#ED7501",
+  "eventos": "#ED7501",
+  "otros": "#ED7501",
+
   "educacion": "#005BA3",
-  "gestiones bancarias": "#878383"
+  "colegiatura": "#005BA3",
+  "libros": "#005BA3",
+  "utiles": "#005BA3",
+  "cursos": "#005BA3",
+
+  "gestiones bancarias": "#878383",
+  "ajuste de cuenta": "#878383",
+  "comisiones": "#919191"
 };
 
 // Total size of all segments; we set this later, after loading the data.
@@ -164,7 +215,7 @@ function initializeBreadcrumbTrail() {
   // Add the label at the end, for the percentage.
   trail.append("svg:text")
     .attr("id", "endlabel")
-    .style("fill", "#000");
+    .style("fill", "#ccc");
 }
 
 // Generate a string that describes the points of a breadcrumb polygon.
@@ -182,7 +233,7 @@ function breadcrumbPoints(d, i) {
 }
 
 // Update the breadcrumb trail to show the current sequence and percentage.
-/*function updateBreadcrumbs(nodeArray, percentageString) {
+function updateBreadcrumbs(nodeArray, percentageString) {
 
   // Data join; key function combines name and depth (= position in sequence).
   var trail = d3.select("#trail")
@@ -223,7 +274,7 @@ function breadcrumbPoints(d, i) {
   d3.select("#trail")
       .style("visibility", "");
 
-}*/
+}
 
 function drawLegend() {
 

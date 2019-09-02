@@ -35,9 +35,9 @@
       </div>-->
 
       <div class="grid-x grid-padding-x">
-        <div class="large-8 cell">
+        <div class="large-12 cell">
           <div class="callout money-spendings">
-            <h5>Spendings in detail</h5>
+            <h5>Spendings in detail in 2018</h5>
             <div id="main">
               <div id="chart">
                 <div id="explanation" style="visibility: hidden;">
@@ -49,24 +49,33 @@
             </div>
 
             <div id="sidebar">
-                <input type="checkbox" id="togglelegend"> Spending categories<br/>
-                <div id="legend" style="visibility: hidden;"></div>
-              </div>
+                <!--<input type="checkbox" id="togglelegend"> Spending categories<br/>-->
+                <div class="legendbar">
+                  <span class="legend food">comida</span>
+                  <span class="legend home">hogar</span>
+                  <span class="legend health">salud</span>
+                  <span class="legend transportation">transporte</span>
+                  <span class="legend personal">personales</span>
+                  <span class="legend education">educacion</span>
+                  <span class="legend entertainment">entretenimiento</span>
+                  <span class="legend management">gestiones</span>
+                </div>
+            </div>
 
-              <script type="text/javascript" src="js/sequences.js"></script>
-              <script type="text/javascript">
-                // Hack to make this example display correctly in an iframe on bl.ocks.org
-                d3.select(self.frameElement).style("height", "700px");
+            <script type="text/javascript" src="js/sequences.js"></script>
+            <script type="text/javascript">
+              // Hack to make this example display correctly in an iframe on bl.ocks.org
+              d3.select(self.frameElement).style("height", "700px");
             </script> 
           
           </div>
         </div>
 
-        <div class="large-4 cell">
+        <!--<div class="large-4 cell">
           <div class="callout">
             <h5>Spent per month</h5>
           </div>
-        </div>
+        </div>-->
 
       </div>
     </div>
