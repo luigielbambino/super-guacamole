@@ -1,0 +1,142 @@
+#bars{
+  width: 100%;
+  height: 653px;
+}
+
+.barText{
+  color: #3e464c !important;
+  font-weight:500;
+}
+
+.month-spendings{
+  background-color:#03A9F4 !important;
+}
+
+.month-spendings h5{
+  color: #ffffff;
+}
+
+.money-spendings{
+  /*width: 800px;*/
+  height: 700px;
+}
+
+.callout h5{
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.title{
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#main {
+  float: left;
+  width: 750px;
+}
+
+#sidebar {
+  float: left;
+  width: 100%;
+}
+
+#sequence {
+  width: 600px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  fill: #fff;
+  font-size: 11px;
+}
+
+#chart {
+  position: relative;
+}
+
+#chart path {
+  stroke: #fff;
+}
+
+#explanation {
+  position: absolute;
+  top: 245px;
+  left: 265px;
+  width: 200px;
+  text-align: center;
+  color: #666;
+  z-index: 1;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+
+#amount {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#category {
+  font-size: 2.5em;
+}
+
+#subcategory {
+  font-size: 1.5em;
+}
+
+#description {
+  font-size: 1em;
+}
+
+[type='checkbox']{
+  margin: 0 !important;
+}
+
+.legendbar{
+}
+
+.legend{
+  width: 80px;
+  float: left;
+  font-weight: 500;
+  font-size: 10px;
+  padding: 5px;
+  margin: 10px 3px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+}
+.home{
+  background-color: #EE6B53;
+}
+.food{
+  background-color: #81BD28;
+}
+.health{
+  background-color: #B584C8;
+}
+.transportation{
+  background-color: #FECF42;
+}
+.personal{
+  background-color: #0FB0C9;
+}
+.entertainment{
+  background-color: #ED7501;
+}
+.education{
+  background-color: #005BA3;
+}
+.management{
+  background-color: #878383;
+}
