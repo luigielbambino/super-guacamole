@@ -3,6 +3,18 @@
   height: 653px;
 }
 
+rect{
+  cursor: pointer;
+}
+
+.rectActive{
+  fill:orange;
+}
+
+rect:hover{
+  fill:orange;
+}
+
 .barText{
   color: #3e464c !important;
   font-weight:500;

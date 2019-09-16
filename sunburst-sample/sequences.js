@@ -1,5 +1,5 @@
 // Dimensions of sunburst.
-var width = 730;
+var width = 750;
 var height = 600;
 var radius = Math.min(width, height) / 2;
 
@@ -10,65 +10,14 @@ var b = {
 
 // Mapping of step names to colors.
 var colors = {
-  "hogar": "#EE6B53",
-  "agua": "#EE6B53",
-  "luz": "#ED745F",
-  "reparaciones": "#ED7E6B",
-  "renta": "#ED8877",
-  "decoracion": "#ED9282",
-  "gas": "#ED9D8E",
-  "impuestos": "#EDA79A",
-  "telefono": "#EDB1A6",
-  "lavanderia": "#EDBBB2",
-  "accesorios": "#EDC5BE",
-
-  "comida": "#82BC28",
-  "despensa": "#82BC28",
-  "restaurante": "#98BD60",
-  "alcohol": "#A7BD86",
-
-  "salud": "#B584C8",
-  "farmacia": "#B584C8",
-  "consultas medicas": "#B68BC7",
-  "gimnasio": "#B995C7",
-  "seguro de vida": "#BC9FC7",
-  "seguro medico": "#BEA9C7",
-
-  "transporte": "#FECF42",
-  "gasolina": "#FECF42",
-  "seguro de coche": "#FFD659",
-  "transporte publico": "#FFDC73",
-  "impuestos coche": "#FFE28C",
-  "renta coche": "#FFE9A6",
-  "compra de coche": "#FFEFBF",
-  "taller mecanico": "#FFF5D9",
-
-  "personales": "#0FB0C9",
-  "ropa": "#0FB0C9",
-  "gadgets": "#22B3C9",
-  "peluqueria": "#36B6C9",
-  "accesorios": "#4BB9C9",
-  "regalos": "#5FBBC9",
-  "otros": "#73BEC9",
-
-  "entretenimiento": "#ED7501",
-  "musica": "#ED7501",
-  "cine": "#ED7501",
-  "viajes": "#ED7501",
-  "deporte": "#ED7501",
-  "fiestas": "#ED7501",
-  "eventos": "#ED7501",
-  "museos": "#ED7501",
-
-  "educacion": "#005BA3",
-  "colegiatura": "#005BA3",
-  "libros": "#005BA3",
-  "utiles": "#005BA3",
-  "cursos": "#005BA3",
-
-  "gestiones bancarias": "#878383",
-  "ajuste de cuenta": "#878383",
-  "comisiones": "#919191"
+  "hogar": "#003f5c",
+  "comida": "#2f4b7c",
+  "salud": "#665191",
+  "transporte": "#a05195",
+  "personales": "#d45087",
+  "entretenimiento": "#f95d6a",
+  "educacion": "#ff7c43",
+  "gestiones bancarias": "#ffa600"
 };
 
 // Total size of all segments; we set this later, after loading the data.
@@ -92,7 +41,7 @@ var arc = d3.arc()
 
 // Use d3.text and d3.csvParseRows so that we do not need to have a header
 // row, and can receive the csv as an array of arrays.
-d3.text("data/visit-sequences.csv", function(text) {
+d3.text("visit-sequences.csv", function(text) {
   var csv = d3.csvParseRows(text);
   var json = buildHierarchy(csv);
   createVisualization(json);
@@ -102,7 +51,7 @@ d3.text("data/visit-sequences.csv", function(text) {
 function createVisualization(json) {
 
   // Basic setup of page elements.
-  //initializeBreadcrumbTrail();
+  initializeBreadcrumbTrail();
   drawLegend();
   d3.select("#togglelegend").on("click", toggleLegend);
 
@@ -149,23 +98,11 @@ function mouseover(d) {
     percentageString = "< 0.1%";
   }
 
-  var amount = d.value;
-  var amountString = amount + " €";
-
   d3.select("#percentage")
       .text(percentageString);
 
   d3.select("#explanation")
       .style("visibility", "");
-
-  d3.select("#amount")
-      .text(amountString);
-
-  d3.select("#subcategroy")
-      .text(d.data.name);
-
-  d3.select("#description")
-      .text(d.data.name);
 
   var sequenceArray = d.ancestors().reverse();
   sequenceArray.shift(); // remove root node from the array
@@ -196,7 +133,7 @@ function mouseleave(d) {
   // Transition each segment to full opacity and then reactivate it.
   d3.selectAll("path")
       .transition()
-      .duration(500)
+      .duration(1000)
       .style("opacity", 1)
       .on("end", function() {
               d3.select(this).on("mouseover", mouseover);
@@ -215,7 +152,7 @@ function initializeBreadcrumbTrail() {
   // Add the label at the end, for the percentage.
   trail.append("svg:text")
     .attr("id", "endlabel")
-    .style("fill", "#ccc");
+    .style("fill", "#000");
 }
 
 // Generate a string that describes the points of a breadcrumb polygon.
@@ -280,18 +217,18 @@ function drawLegend() {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 90, h: 30, s: 5, r: 3
+    w: 75, h: 30, s: 3, r: 3
   };
 
   var legend = d3.select("#legend").append("svg:svg")
-      .attr("width", d3.keys(colors).length * (li.w + li.s))
-      .attr("height", li.h);
+      .attr("width", li.w)
+      .attr("height", d3.keys(colors).length * (li.h + li.s));
 
   var g = legend.selectAll("g")
       .data(d3.entries(colors))
       .enter().append("svg:g")
       .attr("transform", function(d, i) {
-              return "translate(" + i * (li.w + li.s) + ", 0)";
+              return "translate(0," + i * (li.h + li.s) + ")";
            });
 
   g.append("svg:rect")
@@ -304,7 +241,7 @@ function drawLegend() {
   g.append("svg:text")
       .attr("x", li.w / 2)
       .attr("y", li.h / 2)
-      .attr("dy", "0.3em")
+      .attr("dy", "0.35em")
       .attr("text-anchor", "middle")
       .text(function(d) { return d.key; });
 }
@@ -361,10 +298,3 @@ function buildHierarchy(csv) {
   }
   return root;
 };
-
-
-
-
-
-
-

@@ -82,9 +82,9 @@ comida-alcohol-zum falken,2
 comida-alcohol-zur alten laterne,2
 comida-despensa-aldi,20
 comida-despensa-club mate,2
-comida-despensa-dm,4
 comida-despensa-dm,15
 comida-despensa-dm,12
+comida-despensa-dm,4
 comida-despensa-edeka,25
 comida-despensa-edeka,39
 comida-despensa-edeka,9
@@ -511,16 +511,16 @@ educacion-utiles-copias,4
 entretenimiento-cine-cinestar,21
 entretenimiento-cine-cinestar,17
 entretenimiento-cine-deadpool,9
-entretenimiento-eventos-bachata,15
 entretenimiento-eventos-clases baile,30
 entretenimiento-eventos-entrada,10
-entretenimiento-eventos-entrada mercado,1
 entretenimiento-eventos-kickerkeller cover,6
-entretenimiento-eventos-rueda de la fortuna,5
-entretenimiento-eventos-twister jena,5
 entretenimiento-fiestas-nahkauf,10
-entretenimiento-museos-buchenwald,3
-entretenimiento-museos-entrada museo,2
+entretenimiento-otros-bachata,15
+entretenimiento-otros-buchenwald,3
+entretenimiento-otros-entrada mercado,1
+entretenimiento-otros-entrada museo,2
+entretenimiento-otros-rueda de la fortuna,5
+entretenimiento-otros-twister jena,5
 entretenimiento-viajes-bayern db,31
 entretenimiento-viajes-blabla frankfurt,18
 entretenimiento-viajes-blabla weimar,14

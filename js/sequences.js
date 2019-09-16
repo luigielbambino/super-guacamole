@@ -58,7 +58,7 @@ var colors = {
   "deporte": "#ED7501",
   "fiestas": "#ED7501",
   "eventos": "#ED7501",
-  "otros": "#ED7501",
+  "museos": "#ED7501",
 
   "educacion": "#005BA3",
   "colegiatura": "#005BA3",
